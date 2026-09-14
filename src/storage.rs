@@ -24,4 +24,14 @@ impl CacheDatabase {
         let mut store = self.store.write().unwrap();
         store.remove(key)
     }
+
+    pub fn find_by_value(&self, search_value: &str) -> Option<String> {
+        let store = self.store.read().unwrap(); // Trava apenas para leitura
+        for (k, v) in store.iter() {
+            if v == search_value {
+                return Some(k.clone());
+            }
+        }
+        None
+    }
 }

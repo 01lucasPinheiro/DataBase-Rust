@@ -1,0 +1,15 @@
+ADD cpf_pai 12345678909
+
+ADD aluno_joao Joao Silva,7,cpf_pai
+
+ADD aluno_maria Maria Souza,8,cpf_pai
+
+ADD aluno_erro Pedro Silva 7 cpf_pai
+
+ADD aluno_novo Lucas,6,cpf_pai
+
+ADD aluno_velho Tiago,9,cpf_pai
+
+ADD aluno_ana Ana Rita,7,cpf_mae_inexistente
+
+GET aluno_joao
